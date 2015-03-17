@@ -1,0 +1,13 @@
+add following to Gemfile:
+gem "logstash-filter-intelmatch", :path => "/ctoc/logstash-filter-intelmatch"
+
+sudo gem install redis (from logstash jruby/bin dir)
+
+filter {
+
+  intelmatch {
+    type => "ip"
+    source => "program"
+  }
+}
+
